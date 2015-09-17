@@ -103,7 +103,6 @@ CREATE TABLE Answers (
     LastActivityDate DATETIME,
     Title varchar(256) NOT NULL,
     Tags VARCHAR(256),
-    AnswerCount INT NOT NULL DEFAULT 0,
     CommentCount INT NOT NULL DEFAULT 0,
     FavoriteCount INT NOT NULL DEFAULT 0,
     CreationDate DATETIME,
