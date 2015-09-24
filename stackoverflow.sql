@@ -95,7 +95,6 @@ CREATE TABLE Answers (
     Id INT NOT NULL PRIMARY KEY,
     ParentId INT,
     Score INT NULL,
-    ViewCount INT NULL,
     Body text NULL,
     OwnerUserId INT NOT NULL,
     LastEditorUserId INT,
