@@ -6,7 +6,7 @@ create database stackoverflow DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_ge
 
 use stackoverflow;
 
-create table Badges (
+CREATE TABLE Badges (
     Id INT NOT NULL PRIMARY KEY,
     UserId INT,
     Name VARCHAR(50),
@@ -163,4 +163,24 @@ CREATE TABLE NegativeVotes (
     CreationDate DATETIME,
     UserId INT,
     BountyAmount INT
+);
+
+CREATE TABLE User_accessHistory (
+    Id INT NOT NULL PRIMARY KEY,
+    UserId INT,
+    accessDate DATETIME
+);
+
+CREATE TABLE Locations (
+    Id INT NOT NULL PRIMARY KEY,
+    Country VARCHAR(40),
+    State VARCHAR(40),
+    City VARCHAR(40),
+    County VARCHAR(40)
+);
+
+CREATE TABLE Post_activeHistory (
+    Id INT NOT NULL PRIMARY KEY,
+    PostId INT,
+    accessDate DATETIME
 );
