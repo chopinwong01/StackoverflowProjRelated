@@ -184,35 +184,35 @@ CREATE TABLE Post_activeHistory (
     accessDate DATETIME
 );
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/Badges.xml'
+LOAD XML LOCAL INFILE 'Badges.xml'
 INTO TABLE Badges
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/Comments.xml'
+LOAD XML LOCAL INFILE 'Comments.xml'
 INTO TABLE Comments
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/PostHistory.xml'
+LOAD XML LOCAL INFILE 'PostHistory.xml'
 INTO TABLE Post_history
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/PostLinks.xml'
+LOAD XML LOCAL INFILE 'PostLinks.xml'
 INTO TABLE Post_links
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/Posts.xml'
+LOAD XML LOCAL INFILE 'Posts.xml'
 INTO TABLE Posts
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/Tags.xml'
+LOAD XML LOCAL INFILE 'Tags.xml'
 INTO TABLE Tags
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/Users.xml'
+LOAD XML LOCAL INFILE 'Users.xml'
 INTO TABLE Users
 ROWS IDENTIFIED BY '<row>';
 
-LOAD XML LOCAL INFILE '/Users/chaoran/Documents/Work/stackExchange/data/stackoverflow.com/Votes.xml'
+LOAD XML LOCAL INFILE 'Votes.xml'
 INTO TABLE Votes
 ROWS IDENTIFIED BY '<row>';
 
@@ -252,7 +252,7 @@ INSERT INTO NegativeVotes(Id, PostId, CreationDate, UserId, BountyAmount)
     FROM Votes WHERE  VoteTypeId = 3 or VoteTypeId = 4 or VoteTypeId = 6 or 
                       VoteTypeId = 10 or VoteTypeId = 12 or VoteTypeId = 15 ;
 
-CREATE INDEX badges_idx_1 ON badges(UserId);
+CREATE INDEX badges_idx_1 ON Badges(UserId);
 
 CREATE INDEX Comments_idx_1 ON Comments(PostId);
 CREATE INDEX Comments_idx_2 ON Comments(UserId);
