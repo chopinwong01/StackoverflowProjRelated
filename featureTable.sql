@@ -4,9 +4,10 @@
 use stackoverflow;
 
 CREATE TABLE Features (
-    Id INT NOT NULL PRIMARY KEY,
+    Id VARCHAR(4) NOT NULL PRIMARY KEY,
     Name VARCHAR(60) NULL,
     Value DOUBLE NULL,
     NormalizedValue DOUBLE NULL,
     Description Text
 );
+
