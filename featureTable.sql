@@ -5,7 +5,7 @@ use stackoverflow;
 
 CREATE TABLE FeaturesDescription (
     Id INT NOT NULL PRIMARY KEY,
-    Name VARCHAR(6DEFAULT '0') NULL,
+    Name VARCHAR(60) NULL,
     Description Text
 );
 
