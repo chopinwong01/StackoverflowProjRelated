@@ -1,4 +1,4 @@
-# Chaoran Huang 2DEFAULT '0'15 at UNSW CSE
+# Chaoran Huang 2015 at UNSW CSE
 # MIT-licensed
 
 use stackoverflow;
