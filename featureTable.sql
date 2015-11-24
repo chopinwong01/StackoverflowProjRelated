@@ -27,9 +27,9 @@ Create table PostFeatures(
 
 Create table OtherFeatures(
   Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  Content VARCHAR(60) DEFAULT '107',
   Note VARCHAR(20) DEFAULT 'LOCATION',
-  FeatureId INT NOT NULL,
+  Content VARCHAR(60) NULL,
+  FeatureId INT NOT NULL DEFAULT '107',
   FeatureValue DOUBLE DEFAULT '0',
   NormalizedValue DOUBLE DEFAULT '0'
 );
