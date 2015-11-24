@@ -51,6 +51,6 @@ WHERE FeaturesDescripiton.Id=109 or 110 or 111 or 112 or 113 or 114
                                  or 216;
                                  
 INSERT INTO OtherFeatures(FeatureId)
-SELECT FeaturesDescripiton.Id as FId
+SELECT FeaturesDescripiton.Id
 FROM FeaturesDescripiton
 WHERE FeaturesDescripiton.Id=107;
