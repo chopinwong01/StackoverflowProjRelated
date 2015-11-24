@@ -3,11 +3,29 @@
 
 use stackoverflow;
 
-CREATE TABLE Features (
+CREATE TABLE FeaturesDescription (
     Id INT NOT NULL PRIMARY KEY,
     Name VARCHAR(60) NULL,
-    Value DOUBLE NULL,
-    NormalizedValue DOUBLE NULL,
     Description Text
 );
 
+Create table UsersFeatures(
+  Id INT NOT NULL PRIMARY KEY,
+  UserId INT NOT NULL,
+  FeatureValue DOUBLE NULL,
+  NormalizedValue DOUBLE NULL
+);
+
+Create table PostFeatures(
+  Id INT NOT NULL PRIMARY KEY,
+  UserId INT NOT NULL,
+  FeatureValue DOUBLE NULL,
+  NormalizedValue DOUBLE NULL
+);
+
+Create table OtherFeatures(
+  Id INT NOT NULL PRIMARY KEY,
+  UserId INT NOT NULL,
+  FeatureValue DOUBLE NULL,
+  NormalizedValue DOUBLE NULL
+);
