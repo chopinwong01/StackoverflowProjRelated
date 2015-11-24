@@ -27,6 +27,8 @@ Create table PostFeatures(
 
 Create table OtherFeatures(
   Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  Content VARCHAR(60) DEFAULT '107',
+  Note VARCHAR(20) DEFAULT 'LOCATION',
   FeatureId INT NOT NULL,
   FeatureValue DOUBLE DEFAULT '0',
   NormalizedValue DOUBLE DEFAULT '0'
@@ -50,7 +52,3 @@ WHERE FeaturesDescripiton.Id=109 or 110 or 111 or 112 or 113 or 114
                                  or 202 or 203 or 204 or 205 or 208
                                  or 216;
                                  
-INSERT INTO OtherFeatures(FeatureId)
-SELECT FeaturesDescripiton.Id
-FROM FeaturesDescripiton
-WHERE FeaturesDescripiton.Id=107;
