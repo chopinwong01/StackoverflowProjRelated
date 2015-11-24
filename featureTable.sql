@@ -28,7 +28,7 @@ Create table PostFeatures(
 Create table OtherFeatures(
   Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   Note VARCHAR(20) DEFAULT 'LOCATION',
-  Content VARCHAR(60) NULL,
+  Content text NULL,
   FeatureId INT NOT NULL DEFAULT '107',
   FeatureValue DOUBLE DEFAULT '0',
   NormalizedValue DOUBLE DEFAULT '0'
@@ -52,3 +52,8 @@ WHERE FeaturesDescripiton.Id=109 or 110 or 111 or 112 or 113 or 114
                                  or 202 or 203 or 204 or 205 or 208
                                  or 216;
                                  
+
+insert into OtherFeatures(Content,FeatureValue,NormalizedValue)
+select Location,count(*),count(*) 
+from stackoverflow.Users where Location is not NULL
+group by location
